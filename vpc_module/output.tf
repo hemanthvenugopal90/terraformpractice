@@ -18,7 +18,7 @@ output "hemanth_publicsubnet2" {
   
 }
 
-output "hemanth_publicsubnet2" {
+output "hemanth_privatesubnet" {
     value = aws_subnet.hemanth_privatesubnet.id
   
 }
