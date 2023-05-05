@@ -5,6 +5,6 @@ resource "aws_nat_gateway" "hemanth_NATGW" {
   depends_on = [aws_eip.hemanth_elasticip]
 
   tags = {
-    Name = ""hemanth-NAT""
+    Name = "hemanth-NAT"
   }
 }
