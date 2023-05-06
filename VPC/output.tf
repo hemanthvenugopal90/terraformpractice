@@ -67,3 +67,7 @@ output "hemanth_pub2_rta" {
     value = aws_route_table_association.hemanth_pub2_rta.id
   
 }
+
+output "hemanth_sg" {
+    value = aws_security_group.hemanth_sg.id
+}
