@@ -23,3 +23,7 @@ variable "priv_sub_cidr" {
 variable "priv_sub_az" {
     type = string
 }
+
+variable "rt_destination_cidr" {
+  type = string
+}
