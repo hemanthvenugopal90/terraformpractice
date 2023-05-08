@@ -30,6 +30,6 @@ resource "aws_security_group" "hemanth_sg" {
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "SG-Hem"
   }
 }
