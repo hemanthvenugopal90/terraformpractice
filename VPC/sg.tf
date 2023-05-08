@@ -4,7 +4,7 @@ resource "aws_security_group" "hemanth_sg" {
   name        = "hemanth_sg"
   description = "Allow TLS inbound traffic"
   vpc_id      = aws_vpc.hemanth_vpc.id
-  #vpc_id = data.terraform_remote_state.vpc.outputs.vpc_id (if created in a different folder or project)
+  #vpc_id = data.terraform_remote_state.vpc.output.vpc_id (if created in a different folder or project)
 
   ingress {
     description      = "Allow port 80"
