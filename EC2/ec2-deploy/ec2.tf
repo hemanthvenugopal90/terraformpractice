@@ -12,5 +12,8 @@ and keep the module ready and use the module whenever you are deploying the reso
 module "myec2" { #you can use any name here for the module
   source = "../ec2_module" #pass this value to pick the existing terraform codes. its getting the buisness logic from ec2-module
   #source = "git::https://github.com/hemanthvenugopal90/terraformpractice/tree/3075ff55d1a515edb50ccfebd623d80bf186a3e8/ec2_Terraform-module"
- 
+  region = var.region
+  associate_public_ip_address = var.associate_public_ip_address
+  key_name = var.key_name
+  instance_type = var.instance_type
 }

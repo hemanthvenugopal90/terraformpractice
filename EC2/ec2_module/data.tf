@@ -1,11 +1,12 @@
 data "terraform_remote_state" "vpc" {
-  backend "s3" {
+  backend = "s3" 
+    config = {
     bucket         = "hemanth12690" #use the same bucket and Dynamodb table as vpc
     key            = "vpc/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraform_state"
+    } 
   }
-}
 
 #using data block to use ami already present in aws to create an ec2 instance
 
@@ -21,7 +22,7 @@ data "aws_ami" "hemanth-ami" {
 }
 
 #associate an elastic ip(static Public ip)
-resource "aws_eip" "hemanth_eip" {
-  instance = aws_eip.hemanth_eip.id
+resource "aws_eip" "hemanth_elasticip" {
+  instance = aws_instance.ec2created_ami.id
   vpc      = true
 }

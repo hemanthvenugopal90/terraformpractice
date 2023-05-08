@@ -4,6 +4,6 @@ resource "aws_instance" "ec2created_ami" {
     associate_public_ip_address = var.associate_public_ip_address
     key_name = var.key_name
     instance_type = var.instance_type
-    subnet_id = data.terraform_remote_state.vpc.outputs.pub_subnet
-    security_groups = [data.aws_security_group.hemanth_sg.id] 
+    subnet_id = data.terraform_remote_state.vpc.outputs.hemanth_publicsubnet1
+    security_groups = [data.terraform_remote_state.vpc.outputs.hemanth_sg] 
 }
