@@ -5,7 +5,7 @@ provider "aws" {
 #create S3 Bucket
 resource "aws_s3_bucket" "hemanth-s3bucket" {
   bucket = "hemanth12690"
-
+    
   tags = {
     Name        = "Hemanth-Venugopal"
     Environment = "Dev"

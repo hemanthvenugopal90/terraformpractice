@@ -7,3 +7,4 @@ output "aws_ami_from_instance" {
     value = aws_ami_from_instance.hemanth_ami.id
   
 }
+
