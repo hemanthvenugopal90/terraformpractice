@@ -1,7 +1,7 @@
 resource "aws_security_group" "dpt_sg" {
   name        = "${var.application}-dpt-security-group"
   description = "Allow dpt traffic"
-  vpc_id      = data.terraform_remote_state.vpc.outputs.vpc_id 
+  vpc_id      = data.terraform_remote_state.vpc.outputs.hemanth_vpc
 
   ingress {
     from_port   = 22
