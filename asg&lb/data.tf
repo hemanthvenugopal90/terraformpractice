@@ -8,12 +8,13 @@ data "terraform_remote_state" "vpc" {
     } 
   }
 
-data "aws_ami" "dpt_ami" {
-  most_recent = true
-  owners      = ["amazon"]
+data "aws_ami" "hemanth-ami" {
+  most_recent = true #this will pick ami's which are recently created
+  owners = ["self"]
 
   filter {
-    name   = "name"
-    values = ["amzn2-ami-kernel-5.10-hvm-2.0.20220419.0-x86_64-gp2"]
+    name = "name"
+    values = ["myami-*"] #suppose ami = myami-0612, myami-* will pick all ami's with "myami-"
+
   }
 }

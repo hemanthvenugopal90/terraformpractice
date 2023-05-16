@@ -3,9 +3,10 @@ variable "region" {
   
 }
 
+#
 variable "application" {
   type    = string
-  default = "dpt-web"
+  default = "hemapplication"
 }
 
 variable "keypair" {
