@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: login-app
+    matchExpressions:
+      - {key: env, operator: In, values: [dev]}
+    
+  template:
+    metadata:
+      name: login
+      labels:
+        app: login-app
+        env: dev
+    spec:
+      containers:
+      - name: login-app
+        image: docker.io/dpthub/dpt6http:1.0
