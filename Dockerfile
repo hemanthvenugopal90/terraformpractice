@@ -79,4 +79,10 @@ CMD ["nginx" "-g" "daemon off;"]
 FROM mysql:5.7
 ENV MYSQL_ALLOW_EMPTY_PASSWORD yes
 
+#sample Dockerfile for testing purpose using kubectl(if you want kubectl to be installed in this image and use kubectl commands by getting inside a pod created out of this image)
+FROM nginx
+RUN curl -LO https://dl.k8s.io/release/v1.29.0/bin/linux/amd64/kubectl &&
+    chmod +x kubectl && \
+    mv kubectl /usr/local/bin/
+
 
